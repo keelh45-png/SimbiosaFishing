@@ -12,16 +12,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Extract Fishing source
+        run: |
+          unzip -o SimbiosaFishing-GitHub-Upload-Package-v2.zip -d extracted
+          cp -a extracted/SimbiosaFishing-GitHub-Package/. .
+
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '25'
+
       - uses: gradle/actions/setup-gradle@v4
+
       - name: Build plugin
         run: gradle --no-daemon clean build
+
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: SimbiosaFishing-JAR
-          path: '**/build/libs/*.jar'
+          path: build/libs/*.jar
           if-no-files-found: error
