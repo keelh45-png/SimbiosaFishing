@@ -7,12 +7,9 @@ version = "1.0.0"
 
 repositories {
     mavenCentral()
-    maven {
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
-    maven {
-        url = uri("https://jitpack.io")
-    }
+    maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://jitpack.io")
+    maven("https://repo.dmulloy2.net/repository/public/")
 }
 
 dependencies {
