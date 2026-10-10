@@ -1,0 +1,398 @@
+# ========================================
+# SIMBIOSA FISHING SYSTEM - SEASON 1
+# Separate from Simbiosa_ToolSkins.sk and Simbiosa_Welcome.sk
+# Skript-only starter: admin give commands and item IDs.
+# ========================================
+
+options:
+    prefix: &8[&bSimbiosa Fishing&8] &7
+
+command /sfish [<text>] [<player>] [<text>]:
+    permission: simbiosa.fishing.admin
+    permission message: {@prefix}&cKamu tidak punya permission.
+    trigger:
+        if arg-1 is not set:
+            send "&8&m--------------------------------"
+            send "&b&lSIMBIOSA FISHING S1"
+            send "&7/sfish list"
+            send "&7/sfish give <player> <fish_id>"
+            send "&7/sfish reload"
+            send "&8&m--------------------------------"
+            stop
+        if arg-1 is "list":
+            send "&b&lSIMBIOSA FISHING S1 &7— 30 FISH"
+            send "&fCOMMON: &7River Carp, Silver Salmon, Blue Minnow, Red Guppy, Yellow Perch"
+            send "&fUNCOMMON: &7Emerald Koi, Golden Tilapia, Striped Bass, Spotted Puffer, Azure Tetra"
+            send "&fRARE: &7Sapphire Fish, Crimson Koi, Violet Angelfish, Golden Arowana, Shadow Eel"
+            send "&fEPIC: &7Crystal Koi, Phantom Jellyfish, Emberfin, Frostscale Fish, Stormray"
+            send "&fLEGENDARY: &7Celestial Koi, Phoenix Salmon, Moonlight Ray, Abyssal Leviathan, Golden Dragonfish"
+            send "&fMYTHIC: &7Astral Whale, Void Serpent, Eternal Phoenix Fish, Divine Leviathan, Genesis Fish"
+            send "&7Contoh ID: &fSIM_FISH_COMMON_01"
+            stop
+        if arg-1 is "reload":
+            send "{@prefix}&aGunakan &f/sk reload Simbiosa_Fishing.sk &auntuk reload."
+            stop
+        if arg-1 is "give":
+            if arg-2 is not set or arg-3 is not set:
+                send "{@prefix}&cFormat: /sfish give <player> <fish_id>"
+                stop
+            if arg-3 is "SIM_FISH_COMMON_01":
+                set {_x} to cod
+                set name of {_x} to "&fRiver Carp"
+                set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_FISH_COMMON_01"
+                set custom model data of {_x} to 51001
+                give {_x} to arg-2
+                send "{@prefix}&aRiver Carp &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_COMMON_02":
+                set {_x} to cod
+                set name of {_x} to "&fSilver Salmon"
+                set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_FISH_COMMON_02"
+                set custom model data of {_x} to 51002
+                give {_x} to arg-2
+                send "{@prefix}&aSilver Salmon &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_COMMON_03":
+                set {_x} to cod
+                set name of {_x} to "&fBlue Minnow"
+                set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_FISH_COMMON_03"
+                set custom model data of {_x} to 51003
+                give {_x} to arg-2
+                send "{@prefix}&aBlue Minnow &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_COMMON_04":
+                set {_x} to cod
+                set name of {_x} to "&fRed Guppy"
+                set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_FISH_COMMON_04"
+                set custom model data of {_x} to 51004
+                give {_x} to arg-2
+                send "{@prefix}&aRed Guppy &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_COMMON_05":
+                set {_x} to cod
+                set name of {_x} to "&fYellow Perch"
+                set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_FISH_COMMON_05"
+                set custom model data of {_x} to 51005
+                give {_x} to arg-2
+                send "{@prefix}&aYellow Perch &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_UNCOMMON_01":
+                set {_x} to cod
+                set name of {_x} to "&fEmerald Koi"
+                set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_FISH_UNCOMMON_01"
+                set custom model data of {_x} to 51006
+                give {_x} to arg-2
+                send "{@prefix}&aEmerald Koi &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_UNCOMMON_02":
+                set {_x} to cod
+                set name of {_x} to "&fGolden Tilapia"
+                set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_FISH_UNCOMMON_02"
+                set custom model data of {_x} to 51007
+                give {_x} to arg-2
+                send "{@prefix}&aGolden Tilapia &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_UNCOMMON_03":
+                set {_x} to cod
+                set name of {_x} to "&fStriped Bass"
+                set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_FISH_UNCOMMON_03"
+                set custom model data of {_x} to 51008
+                give {_x} to arg-2
+                send "{@prefix}&aStriped Bass &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_UNCOMMON_04":
+                set {_x} to cod
+                set name of {_x} to "&fSpotted Puffer"
+                set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_FISH_UNCOMMON_04"
+                set custom model data of {_x} to 51009
+                give {_x} to arg-2
+                send "{@prefix}&aSpotted Puffer &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_UNCOMMON_05":
+                set {_x} to cod
+                set name of {_x} to "&fAzure Tetra"
+                set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_FISH_UNCOMMON_05"
+                set custom model data of {_x} to 51010
+                give {_x} to arg-2
+                send "{@prefix}&aAzure Tetra &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_RARE_01":
+                set {_x} to cod
+                set name of {_x} to "&fSapphire Fish"
+                set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_FISH_RARE_01"
+                set custom model data of {_x} to 51011
+                give {_x} to arg-2
+                send "{@prefix}&aSapphire Fish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_RARE_02":
+                set {_x} to cod
+                set name of {_x} to "&fCrimson Koi"
+                set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_FISH_RARE_02"
+                set custom model data of {_x} to 51012
+                give {_x} to arg-2
+                send "{@prefix}&aCrimson Koi &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_RARE_03":
+                set {_x} to cod
+                set name of {_x} to "&fViolet Angelfish"
+                set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_FISH_RARE_03"
+                set custom model data of {_x} to 51013
+                give {_x} to arg-2
+                send "{@prefix}&aViolet Angelfish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_RARE_04":
+                set {_x} to cod
+                set name of {_x} to "&fGolden Arowana"
+                set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_FISH_RARE_04"
+                set custom model data of {_x} to 51014
+                give {_x} to arg-2
+                send "{@prefix}&aGolden Arowana &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_RARE_05":
+                set {_x} to cod
+                set name of {_x} to "&fShadow Eel"
+                set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_FISH_RARE_05"
+                set custom model data of {_x} to 51015
+                give {_x} to arg-2
+                send "{@prefix}&aShadow Eel &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_EPIC_01":
+                set {_x} to cod
+                set name of {_x} to "&fCrystal Koi"
+                set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_FISH_EPIC_01"
+                set custom model data of {_x} to 51016
+                give {_x} to arg-2
+                send "{@prefix}&aCrystal Koi &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_EPIC_02":
+                set {_x} to cod
+                set name of {_x} to "&fPhantom Jellyfish"
+                set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_FISH_EPIC_02"
+                set custom model data of {_x} to 51017
+                give {_x} to arg-2
+                send "{@prefix}&aPhantom Jellyfish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_EPIC_03":
+                set {_x} to cod
+                set name of {_x} to "&fEmberfin"
+                set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_FISH_EPIC_03"
+                set custom model data of {_x} to 51018
+                give {_x} to arg-2
+                send "{@prefix}&aEmberfin &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_EPIC_04":
+                set {_x} to cod
+                set name of {_x} to "&fFrostscale Fish"
+                set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_FISH_EPIC_04"
+                set custom model data of {_x} to 51019
+                give {_x} to arg-2
+                send "{@prefix}&aFrostscale Fish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_EPIC_05":
+                set {_x} to cod
+                set name of {_x} to "&fStormray"
+                set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_FISH_EPIC_05"
+                set custom model data of {_x} to 51020
+                give {_x} to arg-2
+                send "{@prefix}&aStormray &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_LEGENDARY_01":
+                set {_x} to cod
+                set name of {_x} to "&fCelestial Koi"
+                set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_FISH_LEGENDARY_01"
+                set custom model data of {_x} to 51021
+                give {_x} to arg-2
+                send "{@prefix}&aCelestial Koi &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_LEGENDARY_02":
+                set {_x} to cod
+                set name of {_x} to "&fPhoenix Salmon"
+                set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_FISH_LEGENDARY_02"
+                set custom model data of {_x} to 51022
+                give {_x} to arg-2
+                send "{@prefix}&aPhoenix Salmon &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_LEGENDARY_03":
+                set {_x} to cod
+                set name of {_x} to "&fMoonlight Ray"
+                set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_FISH_LEGENDARY_03"
+                set custom model data of {_x} to 51023
+                give {_x} to arg-2
+                send "{@prefix}&aMoonlight Ray &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_LEGENDARY_04":
+                set {_x} to cod
+                set name of {_x} to "&fAbyssal Leviathan"
+                set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_FISH_LEGENDARY_04"
+                set custom model data of {_x} to 51024
+                give {_x} to arg-2
+                send "{@prefix}&aAbyssal Leviathan &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_LEGENDARY_05":
+                set {_x} to cod
+                set name of {_x} to "&fGolden Dragonfish"
+                set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_FISH_LEGENDARY_05"
+                set custom model data of {_x} to 51025
+                give {_x} to arg-2
+                send "{@prefix}&aGolden Dragonfish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_MYTHIC_01":
+                set {_x} to cod
+                set name of {_x} to "&fAstral Whale"
+                set lore of {_x} to "&7Rarity: &fMYTHIC", "&8ID: SIM_FISH_MYTHIC_01"
+                set custom model data of {_x} to 51026
+                give {_x} to arg-2
+                send "{@prefix}&aAstral Whale &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_MYTHIC_02":
+                set {_x} to cod
+                set name of {_x} to "&fVoid Serpent"
+                set lore of {_x} to "&7Rarity: &fMYTHIC", "&8ID: SIM_FISH_MYTHIC_02"
+                set custom model data of {_x} to 51027
+                give {_x} to arg-2
+                send "{@prefix}&aVoid Serpent &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_MYTHIC_03":
+                set {_x} to cod
+                set name of {_x} to "&fEternal Phoenix Fish"
+                set lore of {_x} to "&7Rarity: &fMYTHIC", "&8ID: SIM_FISH_MYTHIC_03"
+                set custom model data of {_x} to 51028
+                give {_x} to arg-2
+                send "{@prefix}&aEternal Phoenix Fish &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_MYTHIC_04":
+                set {_x} to cod
+                set name of {_x} to "&fDivine Leviathan"
+                set lore of {_x} to "&7Rarity: &fMYTHIC", "&8ID: SIM_FISH_MYTHIC_04"
+                set custom model data of {_x} to 51029
+                give {_x} to arg-2
+                send "{@prefix}&aDivine Leviathan &7diberikan kepada &f%arg-2%&7."
+                stop
+            if arg-3 is "SIM_FISH_MYTHIC_05":
+                set {_x} to cod
+                set name of {_x} to "&fGenesis Fish"
+                set lore of {_x} to "&7Rarity: &fMYTHIC", "&8ID: SIM_FISH_MYTHIC_05"
+                set custom model data of {_x} to 51030
+                give {_x} to arg-2
+                send "{@prefix}&aGenesis Fish &7diberikan kepada &f%arg-2%&7."
+                stop
+            send "{@prefix}&cFish ID tidak ditemukan."
+            stop
+        send "{@prefix}&cSubcommand tidak dikenal. Gunakan /sfish list."
+
+command /srod [<text>] [<player>] [<text>]:
+    permission: simbiosa.fishing.admin
+    permission message: {@prefix}&cKamu tidak punya permission.
+    trigger:
+        if arg-1 is not "give":
+            send "{@prefix}&7Format: /srod give <player> <rod_id>"
+            stop
+        if arg-2 is not set or arg-3 is not set:
+            send "{@prefix}&7Format: /srod give <player> <rod_id>"
+            stop
+        if arg-3 is "SIM_ROD_01":
+            set {_x} to fishing rod
+            set name of {_x} to "&bWooden Rod"
+            set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_ROD_01"
+            set custom model data of {_x} to 51101
+            give {_x} to arg-2
+            send "{@prefix}&aWooden Rod &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_ROD_02":
+            set {_x} to fishing rod
+            set name of {_x} to "&bReinforced Rod"
+            set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_ROD_02"
+            set custom model data of {_x} to 51102
+            give {_x} to arg-2
+            send "{@prefix}&aReinforced Rod &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_ROD_03":
+            set {_x} to fishing rod
+            set name of {_x} to "&bAngler Rod"
+            set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_ROD_03"
+            set custom model data of {_x} to 51103
+            give {_x} to arg-2
+            send "{@prefix}&aAngler Rod &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_ROD_04":
+            set {_x} to fishing rod
+            set name of {_x} to "&bNeptune Rod"
+            set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_ROD_04"
+            set custom model data of {_x} to 51104
+            give {_x} to arg-2
+            send "{@prefix}&aNeptune Rod &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_ROD_05":
+            set {_x} to fishing rod
+            set name of {_x} to "&bCelestial Rod"
+            set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_ROD_05"
+            set custom model data of {_x} to 51105
+            give {_x} to arg-2
+            send "{@prefix}&aCelestial Rod &7diberikan kepada &f%arg-2%&7."
+            stop
+        send "{@prefix}&cRod ID tidak ditemukan."
+
+command /sbait [<text>] [<player>] [<text>]:
+    permission: simbiosa.fishing.admin
+    permission message: {@prefix}&cKamu tidak punya permission.
+    trigger:
+        if arg-1 is not "give":
+            send "{@prefix}&7Format: /sbait give <player> <bait_id>"
+            stop
+        if arg-2 is not set or arg-3 is not set:
+            send "{@prefix}&7Format: /sbait give <player> <bait_id>"
+            stop
+        if arg-3 is "SIM_BAIT_01":
+            set {_x} to rabbit hide
+            set name of {_x} to "&eWorm Bait"
+            set lore of {_x} to "&7Rarity: &fCOMMON", "&8ID: SIM_BAIT_01"
+            set custom model data of {_x} to 51201
+            give {_x} to arg-2
+            send "{@prefix}&aWorm Bait &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_BAIT_02":
+            set {_x} to rabbit hide
+            set name of {_x} to "&eGrub Bait"
+            set lore of {_x} to "&7Rarity: &fUNCOMMON", "&8ID: SIM_BAIT_02"
+            set custom model data of {_x} to 51202
+            give {_x} to arg-2
+            send "{@prefix}&aGrub Bait &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_BAIT_03":
+            set {_x} to tropical fish
+            set name of {_x} to "&eMinnow Bait"
+            set lore of {_x} to "&7Rarity: &fRARE", "&8ID: SIM_BAIT_03"
+            set custom model data of {_x} to 51203
+            give {_x} to arg-2
+            send "{@prefix}&aMinnow Bait &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_BAIT_04":
+            set {_x} to glow ink sac
+            set name of {_x} to "&eGlow Bait"
+            set lore of {_x} to "&7Rarity: &fEPIC", "&8ID: SIM_BAIT_04"
+            set custom model data of {_x} to 51204
+            give {_x} to arg-2
+            send "{@prefix}&aGlow Bait &7diberikan kepada &f%arg-2%&7."
+            stop
+        if arg-3 is "SIM_BAIT_05":
+            set {_x} to gold nugget
+            set name of {_x} to "&eGolden Bait"
+            set lore of {_x} to "&7Rarity: &fLEGENDARY", "&8ID: SIM_BAIT_05"
+            set custom model data of {_x} to 51205
+            give {_x} to arg-2
+            send "{@prefix}&aGolden Bait &7diberikan kepada &f%arg-2%&7."
+            stop
+        send "{@prefix}&cBait ID tidak ditemukan."
+
+on tab complete of "/sfish":
+    set tab completions for position 1 to "list", "give", "reload"
+on tab complete of "/srod":
+    set tab completions for position 1 to "give"
+on tab complete of "/sbait":
+    set tab completions for position 1 to "give"
+
+# IMPORTANT:
+# This file is a starter/admin item-give layer, not a complete fishing loot mechanic.
+# Resource-pack model dispatch and Geyser item mappings must be configured separately.
+# Custom model data ranges used here: fish 51001-51030, rods 51101-51105, bait 51201-51205.
+# ToolSkins CMD 50001-50007 and Gacha Keys 50100-50107 are untouched.

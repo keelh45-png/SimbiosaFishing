@@ -1,0 +1,190 @@
+SIMBIOSA FISHING SYSTEM — SEASON 1
+MASTER ITEM ROSTER
+Minecraft Java Paper 26.2 | Konsep awal untuk resource pack + Skript
+
+============================================================
+STATUS & CATATAN PENTING
+============================================================
+- Dokumen ini menggabungkan 30 ikan, 5 fishing rod, dan 5 bait.
+- Total saat ini: 40 item konsep (30 fish + 5 rod + 5 bait).
+- Daftar nama dan ID internal adalah rancangan, belum item aktif di server.
+- ID di bawah adalah ID internal untuk rancangan Skript, BUKAN CustomModelData atau item_model.
+- Visual Hooked hanya dipakai sebagai referensi awal. Tidak semua ikan sudah memiliki tekstur/model unik.
+- Harga, peluang tangkap, efek rod/bait, durability, crafting, dan model final belum ditetapkan.
+- Jangan menganggap setiap nama berarti aset visualnya sudah tersedia.
+
+============================================================
+A. FISH COLLECTION — 30 IKAN
+============================================================
+
+COMMON — 5 ikan
+C01 | SIM_FISH_COMMON_01 | River Carp
+Referensi visual: Cod | Status: referensi tersedia; mapping visual belum dibuat
+C02 | SIM_FISH_COMMON_02 | Silver Salmon
+Referensi visual: Salmon | Status: referensi tersedia; mapping visual belum dibuat
+C03 | SIM_FISH_COMMON_03 | Blue Minnow
+Referensi visual: Tropical Fish | Status: perlu pilih pola
+C04 | SIM_FISH_COMMON_04 | Red Guppy
+Referensi visual: Tropical Fish | Status: perlu pilih pola
+C05 | SIM_FISH_COMMON_05 | Yellow Perch
+Referensi visual: Tropical Fish | Status: perlu pilih pola
+
+UNCOMMON — 5 ikan
+U01 | SIM_FISH_UNCOMMON_01 | Emerald Koi
+Referensi visual: Tropical Fish | Status: perlu pilih pola/tekstur
+U02 | SIM_FISH_UNCOMMON_02 | Golden Tilapia
+Referensi visual: Tropical Fish | Status: perlu pilih pola/tekstur
+U03 | SIM_FISH_UNCOMMON_03 | Striped Bass
+Referensi visual: Salmon | Status: perlu diferensiasi visual
+U04 | SIM_FISH_UNCOMMON_04 | Spotted Puffer
+Referensi visual: Pufferfish | Status: perlu diferensiasi visual
+U05 | SIM_FISH_UNCOMMON_05 | Azure Tetra
+Referensi visual: Tropical Fish | Status: perlu pilih pola/tekstur
+
+RARE — 5 ikan
+R01 | SIM_FISH_RARE_01 | Sapphire Fish
+Konsep visual: biru safir | Status: aset khusus belum dipilih
+R02 | SIM_FISH_RARE_02 | Crimson Koi
+Konsep visual: koi merah | Status: aset khusus belum dipilih
+R03 | SIM_FISH_RARE_03 | Violet Angelfish
+Konsep visual: ungu elegan | Status: aset khusus belum dipilih
+R04 | SIM_FISH_RARE_04 | Golden Arowana
+Konsep visual: emas mengilap | Status: aset khusus belum dipilih
+R05 | SIM_FISH_RARE_05 | Shadow Eel
+Konsep visual: belut gelap | Status: aset khusus belum dipilih
+
+EPIC — 5 ikan
+E01 | SIM_FISH_EPIC_01 | Crystal Koi
+Konsep visual: sisik kristal | Status: aset khusus belum dipilih
+E02 | SIM_FISH_EPIC_02 | Phantom Jellyfish
+Konsep visual: ubur-ubur hantu | Status: aset khusus belum dipilih
+E03 | SIM_FISH_EPIC_03 | Emberfin
+Konsep visual: sirip bara api | Status: aset khusus belum dipilih
+E04 | SIM_FISH_EPIC_04 | Frostscale Fish
+Konsep visual: sisik es | Status: aset khusus belum dipilih
+E05 | SIM_FISH_EPIC_05 | Stormray
+Konsep visual: pari badai | Status: aset khusus belum dipilih
+
+LEGENDARY — 5 ikan
+L01 | SIM_FISH_LEGENDARY_01 | Celestial Koi
+Konsep visual: koi bercahaya | Status: aset khusus belum dipilih
+L02 | SIM_FISH_LEGENDARY_02 | Phoenix Salmon
+Konsep visual: salmon api | Status: aset khusus belum dipilih
+L03 | SIM_FISH_LEGENDARY_03 | Moonlight Ray
+Konsep visual: pari cahaya bulan | Status: aset khusus belum dipilih
+L04 | SIM_FISH_LEGENDARY_04 | Abyssal Leviathan
+Konsep visual: ikan raksasa laut dalam | Status: aset khusus belum dipilih
+L05 | SIM_FISH_LEGENDARY_05 | Golden Dragonfish
+Konsep visual: ikan naga emas | Status: aset khusus belum dipilih
+
+MYTHIC — 5 ikan
+M01 | SIM_FISH_MYTHIC_01 | Astral Whale
+Konsep visual: paus kosmik | Status: aset khusus belum dipilih
+M02 | SIM_FISH_MYTHIC_02 | Void Serpent
+Konsep visual: naga ular kehampaan | Status: aset khusus belum dipilih
+M03 | SIM_FISH_MYTHIC_03 | Eternal Phoenix Fish
+Konsep visual: ikan phoenix abadi | Status: aset khusus belum dipilih
+M04 | SIM_FISH_MYTHIC_04 | Divine Leviathan
+Konsep visual: leviathan ilahi | Status: aset khusus belum dipilih
+M05 | SIM_FISH_MYTHIC_05 | Genesis Fish
+Konsep visual: ikan asal mula kehidupan | Status: aset khusus belum dipilih
+
+============================================================
+B. FISHING RODS — 5 ITEM
+============================================================
+
+ROD_01 | SIM_ROD_01 | Wooden Rod
+Rarity: COMMON
+Konsep: pancing pemula
+Kemampuan: belum ditentukan
+Visual/model: belum ditentukan
+
+ROD_02 | SIM_ROD_02 | Reinforced Rod
+Rarity: UNCOMMON
+Konsep: pancing yang lebih kokoh
+Kemampuan: belum ditentukan
+Visual/model: belum ditentukan
+
+ROD_03 | SIM_ROD_03 | Angler Rod
+Rarity: RARE
+Konsep: pancing untuk pemancing berpengalaman
+Kemampuan: belum ditentukan
+Visual/model: belum ditentukan
+
+ROD_04 | SIM_ROD_04 | Neptune Rod
+Rarity: EPIC
+Konsep: pancing bertema kekuatan laut
+Kemampuan: belum ditentukan
+Visual/model: belum ditentukan
+
+ROD_05 | SIM_ROD_05 | Celestial Rod
+Rarity: LEGENDARY
+Konsep: pancing bertema kosmik
+Kemampuan: belum ditentukan
+Visual/model: belum ditentukan
+
+============================================================
+C. FISHING BAITS — 5 ITEM
+============================================================
+
+BAIT_01 | SIM_BAIT_01 | Worm Bait
+Rarity: COMMON
+Konsep: umpan dasar
+Efek: belum ditentukan
+Visual/model: belum ditentukan
+
+BAIT_02 | SIM_BAIT_02 | Grub Bait
+Rarity: UNCOMMON
+Konsep: umpan larva
+Efek: belum ditentukan
+Visual/model: belum ditentukan
+
+BAIT_03 | SIM_BAIT_03 | Minnow Bait
+Rarity: RARE
+Konsep: umpan berbentuk ikan kecil
+Efek: belum ditentukan
+Visual/model: belum ditentukan
+
+BAIT_04 | SIM_BAIT_04 | Glow Bait
+Rarity: EPIC
+Konsep: umpan bercahaya
+Efek: belum ditentukan
+Visual/model: belum ditentukan
+
+BAIT_05 | SIM_BAIT_05 | Golden Bait
+Rarity: LEGENDARY
+Konsep: umpan emas
+Efek: belum ditentukan
+Visual/model: belum ditentukan
+
+============================================================
+D. APAKAH 40 ITEM SUDAH CUKUP?
+============================================================
+
+Untuk versi awal Season 1, 40 item konsep sudah cukup untuk mulai merancang sistem:
+- 30 ikan untuk koleksi dan ekonomi.
+- 5 rod untuk progres alat pancing.
+- 5 bait untuk variasi strategi memancing.
+
+Belum wajib menambah item sebelum kemampuan rod, efek bait, harga, peluang tangkap, dan cara memperoleh item ditentukan.
+
+Item tambahan opsional untuk fase berikutnya:
+- Fishing Tackle / aksesori rod.
+- Fish Crate atau Fish Bag.
+- Treasure / junk loot dari memancing.
+- Bait crafting materials.
+- Rod repair item.
+- Fishing quest tokens.
+- Special event fish.
+
+Rekomendasi: jangan tambah item dulu. Kunci 40 item konsep ini, tentukan statistik/efeknya, lalu implementasikan bertahap. Kalau nantinya gameplay terasa kurang, baru tambah item Season 2.
+
+============================================================
+E. LANGKAH SELANJUTNYA
+============================================================
+1. Konfirmasi daftar 40 item dan nama.
+2. Tentukan kemampuan 5 rod.
+3. Tentukan efek 5 bait.
+4. Tetapkan harga, peluang tangkap, durability, dan cara memperoleh item.
+5. Tentukan visual/model serta ID resource pack yang kompatibel.
+6. Implementasikan ke Skript dan uji di Paper 26.2.
