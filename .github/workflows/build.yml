@@ -18,10 +18,12 @@ jobs:
         run: |
           unzip -o SimbiosaFishing-GitHub-Upload-Package-v2.zip -d extracted
           cp -a extracted/SimbiosaFishing-GitHub-Package/. .
-          echo "=== Build file ==="
-          cat build.gradle.kts
-          echo "=== Source files ==="
-          find src -type f
+
+      - name: Add JitPack repository
+        run: sed -i '/repositories {/a\    maven("https://jitpack.io")' build.gradle.kts
+
+      - name: Show Gradle configuration
+        run: cat build.gradle.kts
 
       - name: Set up Java
         uses: actions/setup-java@v4
